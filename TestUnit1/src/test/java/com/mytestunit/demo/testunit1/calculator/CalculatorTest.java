@@ -50,5 +50,71 @@ public class CalculatorTest {
         
         assertSame(c1, c2);
     }
+    
+    @Test
+    /**
+     *  test max value integer
+     */
+    public void testMaxNumberOneAndTwo(){
+         Calculator calculator = new Calculator();
+         
+         int result = calculator.max(1, 2);
+         
+         assertEquals(2, result);
+        
+    }
+
+    @Test
+    /**
+     *  test max value negative numbers
+     */
+    public void testMaxNumberNegativeNumber(){
+         Calculator calculator = new Calculator();
+         
+         int result = calculator.max(-1, -2);
+         
+         assertEquals(-1, result);
+        
+    }
+
+    @Test
+    /**
+     *  test max value equals numbers
+     */
+    public void testMaxNumberEqualsNumber(){
+         Calculator calculator = new Calculator();
+         
+         int result = calculator.max(1, 1);
+         
+         assertEquals(1, result);
+        
+    }
+
+    @Test
+    /**
+     *  test max value operator numbers
+     */
+    public void testMaxNumber0(){
+         Calculator calculator = new Calculator();
+         
+         int result = calculator.max(1+1, 1);
+         
+         assertEquals(2, result);
+        
+    }
+    
+    @Test
+    /**
+     *  test Divide Integer Result
+     */
+    public void testDivideIntResult(){
+         Calculator calculator = new Calculator();
+         
+         int result = calculator.divide(10, 5);
+         
+         assertEquals(2, result);
+        
+    }
+
 
 }
