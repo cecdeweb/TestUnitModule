@@ -5,6 +5,8 @@
 package com.mytestunit.demo.calculatortest;
 
 import com.mytestunit.demo.calculator.Calculator;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -115,6 +117,38 @@ public class CalculatorTest {
          assertEquals(2, result);
         
     }
+    @Test
+    /**
+     *  test Divide Exception Divide Zero
+     */
+    public void testDivideExceptionZero(){
+         Calculator calculator = new Calculator();
+         
+         assertThrows ( ArithmeticException.class, () -> {
+                calculator.divide(10, 0);
+         });
+        }
+    
+    @Test
+    /**
+     * test Number Odd
+     */
+    public void testGetNombresImpairs(){
+        Calculator calculator = new Calculator();
+        
+        ArrayList<Integer> result = calculator.getNombresImpairs(5);
+        
+        assertEquals(3, result.size());
+        assertTrue(result.contains(3));
+        assertFalse(result.contains(2));
+        assertTrue(result.containsAll(Arrays.asList(1, 3, 5)));
 
+        ArrayList<Integer> target = new ArrayList<>();
+        target.addAll(Arrays.asList(1, 3, 5));
+        assertEquals(result.toString(), target.toString());
 
+                    
+    }
+
+                
 }
