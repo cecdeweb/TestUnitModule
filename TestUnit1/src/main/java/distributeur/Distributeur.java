@@ -21,7 +21,7 @@ public class Distributeur {
         public void remplirLeStock(){
         stock.add(new Produit(1, "café", 1, 10));
         stock.add(new Produit(2, "soda", 2, 8));
-        stock.add(new Produit(3, "barre céréales", 3, 20));
+        stock.add(new Produit(3, "barre céréales", 3, 2));
     }
 
     public void insererArgent(int montant){
